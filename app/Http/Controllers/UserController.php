@@ -19,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         //
-        $users = User::all();
+        $users = User::latest()->filter(request(['search']))->paginate(10)->withQueryString();
         return Inertia::render('User/User', ['users' => $users]);
         //return $users->toJson(JSON_PRETTY_PRINT);
     }

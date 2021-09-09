@@ -47,4 +47,13 @@ class User extends Authenticatable
     ];
 
     protected $keyType = 'string';
+
+    public function scopeFilter($query, array $filters) {
+        $query->when( $filters['search'] ?? false, function ($query, $search){
+            return $query   ->where('name', 'like', '%' . $search . '%')
+                            ->orWhere('email', 'like', '%' . $search . '%')
+                            ->orWhere('job', 'like', '%' . $search . '%')
+                            ->orWhere('address', 'like', '%'. $search . '%');
+        });
+    }
 }

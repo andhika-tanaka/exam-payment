@@ -23,13 +23,14 @@
         "postcss": "^8.2.13",
         "postcss-import": "^14.0.1",
         "tailwindcss": "^2.1.2",
-        "vue": "^3.2.10",
+        "vue": "^3.2.11",
         "vue-loader": "^16.1.2"
     },
     "dependencies": {
         "bootstrap": "^5.1.1",
         "bootstrap-vue": "^2.21.2",
         "jquery": "^3.6.0",
+        "laravel-vue-pagination": "^2.3.1",
         "popper.js": "^1.16.1",
         "vue-axios": "^3.3.6",
         "vue-router": "^3.5.2"
