@@ -34,6 +34,12 @@
                 Log in
             </BreezeButton>
         </div>
+
+        <div class="flex items-center justify-end mt-4">
+            <Link :href="route('register')" class="underline text-sm text-gray-600 hover:text-gray-900">
+                Not having an account yet?
+            </Link>
+        </div>
     </form>
 </template>
 
